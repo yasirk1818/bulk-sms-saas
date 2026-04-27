@@ -1,0 +1,4 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Maintenance Mode</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="/public/css/app.css" rel="stylesheet"><style>.error-page{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--bg-primary)}.maint-icon{font-size:5rem;margin-bottom:1rem}</style>
+</head><body><div class="error-page"><div><div class="maint-icon">🔧</div><h2 style="color:var(--text-primary)">Under Maintenance</h2><p style="color:var(--text-secondary);max-width:400px;margin:1rem auto">We're performing scheduled maintenance. We'll be back shortly.</p></div></div></body></html>
