@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# If not already in public directory, rewrite to public
+RewriteCond %{REQUEST_URI} !^/install/
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteCond %{REQUEST_URI} !^/cron/
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Security: block access to app directory
+RewriteRule ^app/ - [F,L]
+RewriteRule ^storage/ - [F,L]
+RewriteRule ^database/ - [F,L]
+RewriteRule ^vendor/ - [F,L]
+
+Options -Indexes
