@@ -7,7 +7,7 @@ $pageTitle = $pageTitle ?? 'Login';
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="csrf-token" content="<?= Csrf::token() ?>">
     <title><?= htmlspecialchars($pageTitle) ?> - <?= defined('APP_NAME') ? APP_NAME : 'BulkSMS Pro' ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -55,6 +55,13 @@ $pageTitle = $pageTitle ?? 'Login';
             box-shadow: var(--shadow-lg);
             position: relative;
             z-index: 1;
+        }
+        @media (max-width: 480px) {
+            .auth-wrapper { padding: 12px; }
+            .auth-card { padding: 24px 18px; border-radius: var(--radius-lg); }
+            .auth-logo h1 { font-size: 1.25rem; }
+            .auth-logo-icon { width: 48px; height: 48px; font-size: 1.3rem; }
+            .auth-logo { margin-bottom: 24px; }
         }
         .auth-logo {
             text-align: center;

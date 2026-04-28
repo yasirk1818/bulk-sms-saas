@@ -198,7 +198,7 @@ if ($step === 2) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>BulkSMS Pro - Installation Wizard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -350,6 +350,17 @@ if ($step === 2) {
             font-size: 4rem;
             color: var(--success);
             margin-bottom: 16px;
+        }
+        @media (max-width: 576px) {
+            body { padding: 12px; }
+            .installer-header { margin-bottom: 24px; }
+            .installer-header h1 { font-size: 1.5rem; }
+            .installer-card { padding: 20px 16px; border-radius: 12px; }
+            .installer-card h2 { font-size: 1.1rem; }
+            .form-control { font-size: 16px; }
+            .req-item { font-size: 0.85rem; flex-wrap: wrap; gap: 6px; }
+            .steps-indicator { gap: 6px; margin-bottom: 20px; }
+            .step-dot { width: 32px; }
         }
         .cron-code {
             background: var(--bg-secondary);

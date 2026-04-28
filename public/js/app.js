@@ -86,6 +86,26 @@ const App = {
             });
         }
 
+        // Close sidebar on mobile when a nav link is tapped
+        if (sidebar) {
+            sidebar.querySelectorAll('.nav-item[href]').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 991) {
+                        sidebar.classList.remove('mobile-open');
+                        overlay?.classList.remove('active');
+                    }
+                });
+            });
+        }
+
+        // Auto-close sidebar on resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 991 && sidebar) {
+                sidebar.classList.remove('mobile-open');
+                overlay?.classList.remove('active');
+            }
+        });
+
         // Active nav item
         const currentPath = window.location.pathname;
         document.querySelectorAll('.nav-item[href]').forEach(item => {
